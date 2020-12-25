@@ -2,7 +2,7 @@ package thomas.springframework.msscbrewe.services;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import thomas.springframework.msscbrewe.web.model.Customer;
+import thomas.springframework.msscbrewe.web.model.CustomerDto;
 
 import java.util.UUID;
 
@@ -14,29 +14,29 @@ import java.util.UUID;
 @Slf4j
 public class CustomerServiceImpl implements CustomerService {
     @Override
-    public Customer getCustomerById(UUID customerId) {
-        return Customer.builder()
+    public CustomerDto getCustomerById(UUID customerId) {
+        return CustomerDto.builder()
                 .id(customerId)
                 .name("Thomas")
                 .build();
     }
 
     @Override
-    public Customer createCustomer(Customer customer) {
-        return Customer.builder()
+    public CustomerDto createCustomer(CustomerDto customerDto) {
+        return CustomerDto.builder()
                 .id(UUID.randomUUID())
-                .name(customer.getName())
+                .name(customerDto.getName())
                 .build();
     }
 
     @Override
-    public void updateCustomer(UUID customerId, Customer customer) {
-        // TODO update Customer
+    public void updateCustomer(UUID customerId, CustomerDto customerDto) {
+        // TODO update CustomerDto
     }
 
     @Override
     public void deleteById(UUID customerId) {
-        log.debug("Deleting Customer...");
+        log.debug("Deleting CustomerDto...");
     }
 
 

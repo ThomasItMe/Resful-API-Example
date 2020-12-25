@@ -1,6 +1,6 @@
 package thomas.springframework.msscbrewe.services;
 
-import thomas.springframework.msscbrewe.web.model.Customer;
+import thomas.springframework.msscbrewe.web.model.CustomerDto;
 
 import java.util.UUID;
 
@@ -10,11 +10,11 @@ import java.util.UUID;
  */
 public interface CustomerService {
 
-    Customer getCustomerById(UUID customerId);
+    CustomerDto getCustomerById(UUID customerId);
 
-    Customer createCustomer(Customer customer);
+    CustomerDto createCustomer(CustomerDto customerDto);
 
-    void updateCustomer(UUID customerId, Customer customer);
+    void updateCustomer(UUID customerId, CustomerDto customerDto);
 
     void deleteById(UUID customerId);
 }

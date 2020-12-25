@@ -1,6 +1,5 @@
 package thomas.springframework.msscbrewe.services.v2;
 
-import thomas.springframework.msscbrewe.web.model.BeerDto;
 import thomas.springframework.msscbrewe.web.model.v2.BeerDtoV2;
 
 import java.util.UUID;
